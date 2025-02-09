@@ -4,38 +4,53 @@
   | default @import url()
   |============================
 */
+
+
 /* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
 @import url('./animations.css');
-@import url('./1-timer.css');
-@import url('./2-snackbar.css')
 
-@import url('./vite-promo.css');
-@import url('./badges.css'); 
-@import url('./back-link.css');
-@import url('./footer.css'); 
+/* Sections style */
 @import url('./header.css');
+@import url('./vite-promo.css');
+@import url('./badges.css');
+@import url('./back-link.css');
+@import url('./footer.css');
+@import url('./1-timer.css');
+@import url('./2-snackbar.css');
 
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+
+
+
+
+ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 25px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-right: 240px;
+  margin-left: 240px;
+  margin-top: 80px;
+  border: 4px dashed violet;
+  border-radius: 50px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.title-homework {
-  color: blueviolet;
-  font-size: 16;;
+h1 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
-}
-
-.timer-title {
-  color:white;
-  background-color: blueviolet;
-  font-size: 20;
-}
-
-.snackbar-title {
-  color:white;
-  background-color: blueviolet;
-  font-size: 20;
+  padding-top: 40px;
 }
