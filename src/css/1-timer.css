@@ -1,1 +1,71 @@
+.head-title {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.kalendar {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    margin: 22px 40px; 
+}
+
+.button-start {
+    color: gray;
+    display: flex;
+    align-items: center;
+    margin-left: 10px; 
+    width: 60px;   
+}
+
+input#datetime-picker {
+    width: 500px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    margin-top: 17px;
+    
+    
+}
+  
+input#datetime-picker:focus {
+    border: 1px solid #58595f;
+}
+  
+input#datetime-picker:hover {
+    border: 1px solid #2e2f42;
+}
+  
+input#datetime-picker:disabled {
+    color: #808080;
+    background-color: #fafafa;
+    cursor: default;
+}
+
+.value {
+    
+    font-size: 45px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    color: #2e2f42;
+}
+
+.label {
+    text-transform: uppercase;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    line-height: 1.5;
+    color: #2e2f42;
+}
+
+.timer {
+    display: flex;
+    justify-content: flex-start;
+    margin: 22px 40px;
+    gap: 24px;
+}
+
 
