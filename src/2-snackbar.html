@@ -17,24 +17,38 @@
     </section>
 
     <form class="form">
-      <label>
+      <label class="label-delay">
         Delay (ms)
-        <input type="number" name="delay" required />
+        <input 
+        class="input-delay"
+        type="number" 
+        name="delay" 
+        required />
       </label>
     
-      <fieldset>
-        <legend>State</legend>
-        <label>
-          <input type="radio" name="state" value="fulfilled" required />
+      <fieldset class="screen-frame">
+        <legend class="title-state">State</legend>
+        <label class="radio-input">
+          <input class='input-state'
+          type="radio" 
+          name="state" 
+          value="fulfilled" 
+          required />
           Fulfilled
         </label>
-        <label>
-          <input type="radio" name="state" value="rejected" required />
+        <label class="radio-input">
+          <input class="input-state"
+          type="radio" 
+          name="state" 
+          value="rejected" 
+          required />
           Rejected
         </label>
       </fieldset>
     
-      <button type="submit">Create notification</button>
+      <button 
+      class="button-notification"
+      type="submit">Create notification</button>
     </form>
   </div>
   </main>
