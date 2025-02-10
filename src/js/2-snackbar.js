@@ -8,23 +8,19 @@ function onSubmit(evt) {
 evt.preventDefault();
 
 const { delay, state } = evt.currentTarget.elements;
-const delayValue = parseInt(delay.value, 10);
-const stateValue = state.value;
-
-createPromise(delayValue, stateValue)
-.then(() =>
+createPromise(delay.value, state.value)
+.then(data =>
     iziToast.success({
         message: `✅ Fulfilled promise in ${delay}ms`, 
         position: 'topRight'
     })
 )
-.catch(() => 
+.catch(data => 
     iziToast.error({
         message: `❌ Rejected promise in ${delay}ms`, 
         position: 'topRight'
     })
 );
-
 form.reset();
 }
 
@@ -32,9 +28,9 @@ function createPromise(delay, state) {
     return new Promise((resolve, reject) => {
     setTimeout(() => {
         if(state === 'fulfilled') {
-            resolve ()
+            resolve (delay);
         } else {
-            reject();
+            reject(delay);
         }
     }, delay);
 });
