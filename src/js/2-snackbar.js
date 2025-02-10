@@ -6,29 +6,36 @@ form.addEventListener('submit', onSubmit);
 
 function onSubmit(evt) {
 evt.preventDefault();
+
 const { delay, state } = evt.currentTarget.elements;
-createPromise(delay.value, state.value)
-.then(data =>
+const delayValue = parseInt(delay.value, 10);
+const stateValue = state.value;
+
+createPromise(delayValue, stateValue)
+.then(() =>
     iziToast.success({
         message: `✅ Fulfilled promise in ${delay}ms`, 
-        position: 'topRight'} 
-))
-.catch(data => 
+        position: 'topRight'
+    })
+)
+.catch(() => 
     iziToast.error({
         message: `❌ Rejected promise in ${delay}ms`, 
-        position: 'topRight'} 
-));
+        position: 'topRight'
+    })
+);
 
 form.reset();
+}
 
 function createPromise(delay, state) {
-    return new Promise((resolve, reject) =>{
+    return new Promise((resolve, reject) => {
     setTimeout(() => {
-        if(state ==='fulfilled') {
-            resolve ("delay")
+        if(state === 'fulfilled') {
+            resolve ()
         } else {
-    reject(delay);
-    }
+            reject();
+        }
     }, delay);
-   })
-}}
+});
+}
