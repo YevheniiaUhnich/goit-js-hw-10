@@ -11,14 +11,14 @@ const { delay, state } = evt.currentTarget.elements;
 createPromise(delay.value, state.value)
 .then(data =>
     iziToast.success({
-        message: `✅ Fulfilled promise in ${delay}ms`, 
-        position: 'topRight'
+        message: `✅ Fulfilled promise in ${data}ms`, 
+        position: 'topRight',
     })
 )
 .catch(data => 
     iziToast.error({
-        message: `❌ Rejected promise in ${delay}ms`, 
-        position: 'topRight'
+        message: `❌ Rejected promise in ${data}ms`, 
+        position: 'topRight',
     })
 );
 form.reset();
@@ -30,7 +30,7 @@ function createPromise(delay, state) {
         if(state === 'fulfilled') {
             resolve (delay);
         } else {
-            reject(delay);
+            reject (delay);
         }
     }, delay);
 });
